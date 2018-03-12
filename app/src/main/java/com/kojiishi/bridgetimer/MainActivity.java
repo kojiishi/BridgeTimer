@@ -43,7 +43,18 @@ public class MainActivity extends WearableActivity {
                 mHandler.postDelayed(this, 1000);
             }
         };
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         mHandler.post(this.mUpdate);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mHandler.removeCallbacksAndMessages(null);
     }
 
     private void update() {
