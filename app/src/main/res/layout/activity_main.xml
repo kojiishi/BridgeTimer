@@ -13,15 +13,38 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        app:boxedEdges="all">
+        android:onClick="resetElapsed">
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_world" />
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_box="all">
 
+            <TextView
+                android:id="@+id/clock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0:00:00" />
+
+            <TextView
+                android:id="@+id/elapsed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0:00:00"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0:00:00" />
+        </LinearLayout>
     </FrameLayout>
+
 </android.support.wear.widget.BoxInsetLayout>
 
